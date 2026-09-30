@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Host — Crafting Intimate Culinary Experiences</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            900: '#062c22',
+                            950: '#021812',
+                        },
+                        amber: {
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        },
+                        gold: {
+                            100: '#fdf4dc',
+                            300: '#e6ca85',
+                            400: '#d4af37',
+                            500: '#aa820a',
+                            600: '#856404'
+                        },
+                        charcoal: '#121413'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'radial-gradient': 'radial-gradient(circle at center, rgba(16, 185, 129, 0.15) 0%, rgba(2, 24, 18, 0.95) 70%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #021812;
+            color: #e5e7eb;
+        }
+        
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom right, #fcd34d, #aa820a, #4a3802) 1;
+        }
+
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #FFF1D0 0%, #E6CA85 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(6, 44, 34, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #021812;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a2b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="bg-emerald-950 text-gray-200 antialiased selection:bg-gold-400 selection:text-emerald-950">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-emerald-950/80 backdrop-blur-md border-b border-gold-400/10 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold-400/40 flex items-center justify-center bg-emerald-900/60 group-hover:border-gold-400 transition-colors">
+                    <i class="fa-solid font-serif text-gold-400 text-lg">H</i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg tracking-wider text-gold-100 uppercase font-medium">The Little Host</span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-gold-400/70">Bengaluru • India</span>
+                </div>
+            </a>
+            <a href="#vip-access" class="text-xs uppercase tracking-widest px-5 py-2.5 rounded-full bg-gold-400/10 hover:bg-gold-400 hover:text-emerald-950 text-gold-300 font-semibold border border-gold-400/30 transition-all duration-300">
+                Join VIP List
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+        <!-- Ambient Background Lighting -->
+        <div class="absolute inset-0 bg-radial-gradient pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900/60 border border-gold-400/20 text-gold-300 text-xs tracking-widest uppercase font-medium">
+                <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                Phase 01: Private Cloud Kitchen Launch
+            </div>
+
+            <!-- Title & Tagline -->
+            <div class="space-y-4">
+                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white">
+                    The Little Host
+                </h1>
+                <p class="font-serif italic text-xl sm:text-2xl md:text-3xl font-light text-gold-100/90 max-w-2xl mx-auto">
+                    "Crafting Intimate Culinary Experiences & Signature Flavors."
+                </p>
+            </div>
+
+            <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
+                We are perfecting 5 secret signature recipes designed for private dining, micro-gatherings, and elevated home entertainment. 
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="pt-4 pb-6">
+                <p class="text-xs uppercase tracking-[0.2em] text-gold-400/80 mb-4 font-semibold">Opening Kitchen Doors In</p>
+                <div class="grid grid-cols-4 gap-3 sm:gap-6 max-w-lg mx-auto" id="countdown">
+                    <div class="glass-card rounded-xl p-3 sm:p-4 text-center">
+                        <span id="days" class="font-serif text-2xl sm:text-4xl font-bold text-white block">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 mt-1 block">Days</span>
+                    </div>
+                    <div class="glass-card rounded-xl p-3 sm:p-4 text-center">
+                        <span id="hours" class="font-serif text-2xl sm:text-4xl font-bold text-white block">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 mt-1 block">Hours</span>
+                    </div>
+                    <div class="glass-card rounded-xl p-3 sm:p-4 text-center">
+                        <span id="minutes" class="font-serif text-2xl sm:text-4xl font-bold text-white block">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 mt-1 block">Mins</span>
+                    </div>
+                    <div class="glass-card rounded-xl p-3 sm:p-4 text-center">
+                        <span id="seconds" class="font-serif text-2xl sm:text-4xl font-bold text-white block">00</span>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 mt-1 block">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <a href="#vip-access" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 via-amber-400 to-gold-500 text-emerald-950 font-bold tracking-wider text-xs uppercase hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all duration-300">
+                    Join the Secret Guest List
+                </a>
+                <a href="#signature-5" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-gold-100 font-medium tracking-wider text-xs uppercase hover:bg-gold-400/10 transition-all duration-300">
+                    Explore The Signature 5
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Signature 5 Section -->
+    <section id="signature-5" class="py-24 px-6 relative border-t border-gold-400/10">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <!-- Section Header -->
+            <div class="text-center space-y-4 max-w-2xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">The Culinary Prelude</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-white">The Signature 5</h2>
+                <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    A curated release of five obsessively refined dishes. Each recipe is protected by our kitchen, but their flavor profiles are ready to be teased.
+                </p>
+            </div>
+
+            <!-- Dish Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="dishes-container">
+                <!-- Javascript will inject or render cards here for interactivity -->
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Secret Guest List Section -->
+    <section id="vip-access" class="py-24 px-6 relative bg-emerald-900/30 border-y border-gold-400/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-gold-400/10 rounded-full blur-2xl"></div>
+                
+                <div class="text-center space-y-4 mb-10">
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold">Exclusive Invitation</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-white">Join the Secret Guest List</h2>
+                    <p class="text-gray-300 text-sm max-w-lg mx-auto">
+                        Be among the first to experience our inaugural launch in Bengaluru. 
+                    </p>
+                    <!-- VIP Perk Badge -->
+                    <div class="inline-block mt-2 p-3 rounded-2xl bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs sm:text-sm">
+                        <i class="fa-solid fa-crown text-gold-400 mr-2"></i>
+                        <span class="font-medium text-gold-300">First 100 VIPs:</span> Receive an exclusive Tasting Invitation & 20% off your premier launch order.
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <div id="form-wrapper">
+                    <form id="vip-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Full Name *</label>
+                                <input type="text" id="fullName" required placeholder="e.g. Ananya Sharma" class="w-full px-4 py-3.5 rounded-xl bg-emerald-950/80 border border-gold-400/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Email Address *</label>
+                                <input type="email" id="email" required placeholder="ananya@example.com" class="w-full px-4 py-3.5 rounded-xl bg-emerald-950/80 border border-gold-400/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3.5 rounded-xl bg-emerald-950/80 border border-gold-400/20 text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Ideal Gathering Size</label>
+                                <select id="gatheringSize" class="w-full px-4 py-3.5 rounded-xl bg-emerald-950/80 border border-gold-400/20 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors">
+                                    <option value="Just Me (Personal Delivery)" class="bg-emerald-950 text-white">Just Me (Personal Dining)</option>
+                                    <option value="Private Dinner (2-6 Guests)" class="bg-emerald-950 text-white">Private Dinner (2–6 Guests)</option>
+                                    <option value="Intimate Party (10-25 Guests)" class="bg-emerald-950 text-white">Intimate Party (10–25 Guests)</option>
+                                    <option value="Bespoke Event (25+ Guests)" class="bg-emerald-950 text-white">Bespoke Event (25+ Guests)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-400 via-amber-400 to-gold-500 text-emerald-950 font-bold uppercase tracking-widest text-xs hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
+                            Reserve VIP Access Pass
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Pass Display Container (Hidden Initially) -->
+                <div id="vip-pass-card" class="hidden text-center space-y-6 pt-4">
+                    <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-900/90 via-emerald-950 to-emerald-900/90 border-2 border-gold-400/50 shadow-2xl relative overflow-hidden">
+                        <!-- Watermark Icon -->
+                        <i class="fa-solid fa-crown absolute -bottom-6 -right-6 text-9xl text-gold-400/5"></i>
+                        
+                        <div class="flex justify-between items-start border-b border-gold-400/20 pb-4 mb-6">
+                            <div class="text-left">
+                                <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">VIP Secret Pass</span>
+                                <h3 class="font-serif text-xl text-white" id="pass-name-display">Guest Name</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-gold-400/20 border border-gold-400/40 rounded-full text-gold-300 text-[10px] tracking-widest uppercase font-bold">Confirmed</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 text-left mb-6 text-xs">
+                            <div>
+                                <span class="text-gray-400 block text-[10px] uppercase">Access ID</span>
+                                <span class="text-gold-100 font-mono" id="pass-id">TLH-0000</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 block text-[10px] uppercase">Location</span>
+                                <span class="text-gold-100">Bengaluru, KA</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 block text-[10px] uppercase">Tier Perk</span>
+                                <span class="text-gold-300 font-semibold">20% Off Launch Order</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 block text-[10px] uppercase">Gathering Preference</span>
+                                <span class="text-gold-100" id="pass-size-display">Private Dinner</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-emerald-950/80 p-3 rounded-lg border border-gold-400/20 text-[11px] text-gray-300 italic">
+                            "Your pass is saved. We will notify you prior to public opening for early kitchen booking access."
+                        </div>
+                    </div>
+
+                    <button onclick="resetForm()" class="text-xs text-gold-400 hover:underline tracking-wider uppercase">
+                        Register another guest
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Journey Teaser (Evolution) -->
+    <section class="py-24 px-6 relative">
+        <div class="max-w-5xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Our Long-Term Vision</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-white">The Evolution of The Little Host</h2>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">
+                    From perfecting delivery culinary boxes to hosting bespoke offsite gatherings.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Timeline Card 1 -->
+                <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-utensils text-lg"></i>
+                        </div>
+                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Phase 01 • Active Focus</span>
+                        <h3 class="font-serif text-2xl text-white">The Cloud Kitchen</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Perfecting our 5 signature dishes, launching door-to-door delivery across Bengaluru, and building intimate culinary connections.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-gold-300/80">Status: Opening Soon</span>
+                </div>
+
+                <!-- Timeline Card 2 -->
+                <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between space-y-6 opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-mug-hot text-lg"></i>
+                        </div>
+                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Phase 02 • Next Horizon</span>
+                        <h3 class="font-serif text-2xl text-white">The Experiential Cafe</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            A brick-and-mortar tasting room and intimate cafe hub. Designed for daytime coffee, private dinner pop-ups, and community gatherings.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-500">Status: Concept & Site Selection</span>
+                </div>
+
+                <!-- Timeline Card 3 -->
+                <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between space-y-6 opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-champagne-glasses text-lg"></i>
+                        </div>
+                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Phase 03 • Ultimate Destination</span>
+                        <h3 class="font-serif text-2xl text-white">Intimate Event Management</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            Full-scale turnkey event design, tablescaping, and bespoke catering for micro-weddings, luxury private dinners, and brand launches.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-500">Status: Future Roadmap</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Story Modal -->
+    <div id="story-modal" class="fixed inset-0 z-50 bg-emerald-950/90 backdrop-blur-md hidden flex items-center justify-center p-6">
+        <div class="glass-card max-w-xl w-full rounded-3xl p-8 sm:p-10 relative space-y-6 border border-gold-400/40">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div>
+                <span id="modal-dish-number" class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Dish 01</span>
+                <h3 id="modal-dish-title" class="font-serif text-2xl sm:text-3xl text-white mt-1">Dish Name</h3>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-wider text-gold-300 font-medium">The Inspiration & Notes</h4>
+                <p id="modal-dish-story" class="text-gray-300 text-sm leading-relaxed italic">Story content goes here...</p>
+            </div>
+            <div class="pt-4 border-t border-gold-400/20 flex justify-between items-center text-xs">
+                <span class="text-gray-400">Pairing Recommendation:</span>
+                <span id="modal-dish-pairing" class="text-gold-300 font-medium">Natural Wine or Sparkling Botanical</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gold-400/10 py-12 px-6 bg-emerald-950">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <p class="font-serif text-lg text-gold-100">The Little Host</p>
+                <p class="text-xs text-gray-400 mt-1">© 2026 thelittlehost.in • All Rights Reserved.</p>
+            </div>
+
+            <div class="flex items-center gap-6 text-gray-400 text-sm">
+                <a href="#" class="hover:text-gold-400 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-gold-400 transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
+                <a href="mailto:concierge@thelittlehost.in" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+            </div>
+
+            <div class="text-xs text-gray-400 text-center md:text-right">
+                <p>Designed for Intimate Gatherings</p>
+                <p class="text-gold-400/80 mt-1">Bengaluru, Karnataka, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dishes Data
+        const signatureDishes = [
+            {
+                id: 1,
+                number: "Dish 01",
+                title: "The Truffle & Wild Mushroom Confit",
+                profile: "Savory • Umami • Velvety Finish",
+                notes: "Slow-roasted wild forest mushrooms, infused with dark cold-pressed truffle oil and finished with a silk broth reduction.",
+                story: "Crafted after months of balancing earthy forest notes with a light, non-heavy mouthfeel. Designed specifically to pair with intimate evening conversations.",
+                pairing: "Full-bodied Red or Oaked Chardonnay"
+            },
+            {
+                id: 2,
+                number: "Dish 02",
+                title: "Slow-Braised Glazed Pork Belly / Short Ribs",
+                profile: "Melt-In-Mouth • Spiced Honey • Aromatic",
+                notes: "12-hour braised cut coated in a caramelized ginger and wild mountain honey reduction with subtle native spices.",
+                story: "Inspired by slow cooking techniques over low embers. The glaze is balanced to be deeply comforting without overpowering the palate.",
+                pairing: "Craft Amber Ale or Dry Pinot Noir"
+            },
+            {
+                id: 3,
+                number: "Dish 03",
+                title: "Smoked Saffron & Artisan Burrata Pasta",
+                profile: "Silky • Rich • Fragrant Threads",
+                notes: "Handmade ribbon pasta tossed in a light saffron emulsion, topped with fresh artisanal burrata and crushed pistachios.",
+                story: "A study in contrast: warm, aromatic Kashmiri saffron meeting the fresh, cool creaminess of locally sourced burrata.",
+                pairing: "Crisp Sauvignon Blanc or Prosecco"
+            },
+            {
+                id: 4,
+                number: "Dish 04",
+                title: "Charred Citrus & Herb Infused Catch",
+                profile: "Zesty • Delicate • Smoked Emulsion",
+                notes: "Sustainably caught fish cooked over wood flame, finished with charred local lemon, fresh dill, and a velvety herb emulsion.",
+                story: "Light yet memorable. Designed for warm evening gatherings where fresh brightness is paramount.",
+                pairing: "Citrus Botanical Infusion or Dry Rosé"
+            },
+            {
+                id: 5,
+                number: "Dish 05",
+                title: "Deconstructed Dark Cacao & Espresso Opera",
+                profile: "Bittersweet • Decadent • Gold-Dusted",
+                notes: "70% Single-origin dark chocolate mousse layered with espresso-soaked crisp layers and gold dust finish.",
+                story: "The grand finale to any hosting experience. Rich cocoa paired with bold espresso to end the night on an unforgettable note.",
+                pairing: "Single Origin Filter Coffee or Port Wine"
+            }
+        ];
+
+        // Render Dishes
+        const container = document.getElementById('dishes-container');
+        signatureDishes.forEach(dish => {
+            const card = document.createElement('div');
+            card.className = 'glass-card rounded-2xl p-8 space-y-6 flex flex-col justify-between transition-all duration-300';
+            card.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold">${dish.number}</span>
+                        <span class="w-2 h-2 rounded-full bg-gold-400/50"></span>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white font-medium">${dish.title}</h3>
+                    <p class="text-xs uppercase tracking-wider text-gold-300/90 font-medium">${dish.profile}</p>
+                    <p class="text-gray-400 text-xs leading-relaxed">${dish.notes}</p>
+                </div>
+                <button onclick="openModal(${dish.id})" class="inline-flex items-center gap-2 text-xs text-gold-400 hover:text-gold-300 uppercase tracking-wider font-semibold transition-colors pt-4 border-t border-gold-400/10">
+                    <span>The Culinary Story</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+            `;
+            container.appendChild(card);
+        });
+
+        // Modal Controls
+        function openModal(id) {
+            const dish = signatureDishes.find(d => d.id === id);
+            if (!dish) return;
+            document.getElementById('modal-dish-number').innerText = dish.number;
+            document.getElementById('modal-dish-title').innerText = dish.title;
+            document.getElementById('modal-dish-story').innerText = `"${dish.story}"`;
+            document.getElementById('modal-dish-pairing').innerText = dish.pairing;
+            document.getElementById('story-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('story-modal').classList.add('hidden');
+        }
+
+        // Form & Pass Generation
+        document.getElementById('vip-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('fullName').value;
+            const size = document.getElementById('gatheringSize').value;
+            const randomID = 'TLH-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('pass-name-display').innerText = name;
+            document.getElementById('pass-size-display').innerText = size;
+            document.getElementById('pass-id').innerText = randomID;
+
+            document.getElementById('form-wrapper').classList.add('hidden');
+            document.getElementById('vip-pass-card').classList.remove('hidden');
+        });
+
+        function resetForm() {
+            document.getElementById('vip-form').reset();
+            document.getElementById('form-wrapper').classList.remove('hidden');
+            document.getElementById('vip-pass-card').classList.add('hidden');
+        }
+
+        // Countdown Timer Logic
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 30); // 30 days countdown target
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
